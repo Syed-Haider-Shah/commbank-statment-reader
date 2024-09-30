@@ -1,7 +1,7 @@
 import csv
 import re
 
-search_term = "Transfer"
+search_term = input("Please enter a search term: ")
 pattern = fr"(?=.*{search_term})"
 
 with open('data.csv', 'r') as csv_file:
