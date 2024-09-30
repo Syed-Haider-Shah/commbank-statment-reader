@@ -1,5 +1,6 @@
 import csv
 import re
+import pandas as pd
 
 search_term_1 = input("Month ")
 search_term_2 = input("Search ")
@@ -16,4 +17,5 @@ with open('data2.csv', 'r') as csv_file:
       if re.match(pattern2, line[2]):
         results.append((line[2], line[1]))
 
-print(results)
+df = pd.DataFrame(results)
+print(df)
