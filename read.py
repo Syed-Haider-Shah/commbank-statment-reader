@@ -1,7 +1,8 @@
 import csv
 import re
 
-pattern = r"(?=.*\bTransfer\b)"
+search_term = "Transfer"
+pattern = fr"(?=.*{search_term})"
 
 with open('data.csv', 'r') as csv_file:
   csv_reader = csv.reader(csv_file)
